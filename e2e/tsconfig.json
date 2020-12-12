@@ -2,12 +2,22 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "outDir": "../out-tsc/e2e",
     "module": "commonjs",
     "target": "es2018",
+    "moduleResolution": "node",
     "types": [
       "jasmine",
-      "node"
-    ]
+      "node",
+    ],
+    "lib": [
+      "es2017"
+    ],
+    "strict": true,
+    "sourceMap": true,
+    "noEmitOnError": true,
+    "baseUrl": "."
   }
 }
