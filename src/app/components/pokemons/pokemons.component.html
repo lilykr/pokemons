@@ -1,4 +1,5 @@
 <div class=pokemon-cards>
+  <!-- mapping on pokemons to access the informations and displaying infos -->
   <div class="pokemon-card" *ngFor="let pokemon of pokemons">
     <img src={{pokemon.img}} class="pokemon-img" />
     <div class="pokemon-infos">
@@ -6,7 +7,8 @@
         <div class="pokemon-number">n°{{pokemon.id}}</div>
         <div class="pokemon-title"> {{pokemon.name}} </div>
       </div>
-      <div class="pokemon-type">Type: {{pokemon.type}}</div>
+      <div class="pokemon-type">Type: 
+        {{pokemon.type}}</div>
     </div>
   </div>
 </div>

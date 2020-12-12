@@ -9,12 +9,14 @@ import jsonData from '../../../assets/seed.json'
 })
 
 export class PokemonsComponent implements OnInit {
+  //initializing pokemons to an empty array 
   pokemons: Pokemon[] = [];
 
   constructor() {
   }
 
   ngOnInit() {
+    //setting pokemon data
     this.pokemons = jsonData as Pokemon[];
   }
 
