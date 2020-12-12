@@ -1,6 +1,14 @@
+<div class="select">
+  <label for="select">Select a type</label>
+  <select (change)="onTypeChange($event)">
+      <option value>select a type</option>
+      <option *ngFor="let type of pokemonTypes" [value]="type">{{ type }}</option>
+  </select>
+</div>
+
 <div class=pokemon-cards>
   <!-- mapping on pokemons to access the informations and displaying infos -->
-  <div class="pokemon-card" *ngFor="let pokemon of pokemons">
+  <div class="pokemon-card" *ngFor="let pokemon of filteredPokemons">
     <img src={{pokemon.img}} class="pokemon-img" />
     <div class="pokemon-infos">
       <div class="pokemon-name">
