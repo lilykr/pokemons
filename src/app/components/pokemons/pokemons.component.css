@@ -1,9 +1,8 @@
 .pokemon-card {
   display: flex;
-  border: solid black;
-  padding: 10px;
-  margin: 12px;
-  width: 400px
+  margin: 6px;
+  width: 400px;
+  border: 1px solid black;
 }
 
 .pokemon-img {
@@ -14,4 +13,20 @@
 .pokemon-cards {
   display: flex;
   flex-wrap: wrap;
+}
+
+.pokemon-name {
+  font-size: 23px
+}
+
+.pokemon-number {
+  font-size: 20px;
+  text-align: end;
+}
+
+.pokemon-infos {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 8px
 }

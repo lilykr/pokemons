@@ -2,7 +2,7 @@
 
 <div >
   <input type="text" (input)="onSearchTextChange($event)" placeholder="Search by name..."/>
-  <input type="number" (change)="onNumberChange($event)" min="0"/>
+  <input type="number" (change)="onNumberChange($event)" placeholder="Search by number" min="0"/>
   <select (change)="onTypeChange($event)">
       <option value>Select a type</option>
       <option *ngFor="let type of pokemonTypes" [value]="type">{{ type }}</option>
@@ -14,9 +14,9 @@
   <div class="pokemon-card" *ngFor="let pokemon of filteredPokemons">
     <img src={{pokemon.img}} class="pokemon-img" />
     <div class="pokemon-infos">
-      <div class="pokemon-name">
+      <div class="pokemon-title">
         <div class="pokemon-number">n°{{pokemon.id}}</div>
-        <div class="pokemon-title"> {{pokemon.name}} </div>
+        <div class="pokemon-name"> {{pokemon.name}} </div>
       </div>
       <div class="pokemon-type">Type: 
         {{pokemon.type}}</div>
